@@ -1,0 +1,20 @@
+$primaryColor: #03a9f4;
+$secondColor: #bbdefb;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: $primaryColor;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    list-style: none;
+  }
+}

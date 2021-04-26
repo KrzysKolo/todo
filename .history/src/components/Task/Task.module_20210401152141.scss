@@ -1,0 +1,46 @@
+@mixin truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.task {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 30px);
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 16px;
+  background-color: #f5f5f5;
+  box-shadow: -3px 3px 8px 0 rgba(51, 51, 51, 0.1);
+  &__state-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  &__title {
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: bold;
+
+    @include truncate-text;
+  }
+
+  &__description {
+    flex-grow: 1;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+  }
+  &__creation-date,
+  &__deadline {
+    font-size: 12px;
+
+    @include truncate-text;
+  }
+}
